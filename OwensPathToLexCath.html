@@ -188,14 +188,19 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 /* Benchmark rows */
 .bench-mini-row{
   border-radius:5px;padding:8px 10px;flex:1;
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;flex-direction:column;
   background:#f8faff;border:1.5px solid var(--border);
+  cursor:pointer;transition:border-color .15s;
 }
 .bench-mini-row.has-data{background:#eef3ff;}
+.bm-header{display:flex;align-items:center;justify-content:space-between;}
 .bm-name{font-size:0.73rem;font-weight:700;color:var(--navy);}
-.bm-right{text-align:right;}
+.bm-right{display:flex;align-items:center;gap:4px;}
 .bm-val{font-size:1.05rem;font-weight:900;}
-.bm-unit{font-size:0.52rem;color:var(--muted);display:block;}
+.bm-unit{font-size:0.52rem;color:var(--muted);}
+.bm-chevron{font-size:0.65rem;color:var(--muted);transition:transform .2s;margin-left:2px;}
+.bench-expand{display:none;margin-top:6px;padding-top:6px;border-top:1px solid var(--border);}
+.bench-expand.open{display:block;}
 
 /* Ticker */
 .ticker-pct{font-size:3.8rem;font-weight:900;color:var(--accent);line-height:1;}
@@ -432,16 +437,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 
     <!-- CARD 3: Benchmark Tracker -->
     <div class="sched-card">
-      <div class="sz-label">&#128200; Benchmark Tracker</div>
+      <div class="sz-label">&#128200; Benchmark Tracker <span style="font-size:0.55rem;font-weight:400;color:var(--muted);text-transform:none;">tap to log</span></div>
       <div class="card-body" id="bench-mini-grid"></div>
-      <button onclick="toggleBenchFull()" style="margin-top:8px;width:100%;background:var(--blue);color:white;border:none;border-radius:7px;padding:7px 0;font-size:0.71rem;font-weight:700;cursor:pointer;flex-shrink:0;">&#9998; Log / Update</button>
-      <div class="bench-full" id="bench-full">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin:8px 0 6px;">
-          <span style="font-size:0.72rem;font-weight:800;color:var(--navy);">Enter Your Numbers</span>
-          <button onclick="clearBenchmarks()" style="background:#f0f0f0;border:none;border-radius:5px;padding:3px 8px;font-size:0.63rem;cursor:pointer;color:var(--muted);">Clear All</button>
-        </div>
-        <div class="bench-grid" id="bench-grid"></div>
-      </div>
     </div>
 
     <!-- COLUMN 4: Accountability Ticker + Streak stacked -->
@@ -1310,27 +1307,45 @@ function loadBench(){try{return JSON.parse(localStorage.getItem('owen_bench')||'
 function saveBench(d){try{localStorage.setItem('owen_bench',JSON.stringify(d));}catch{}}
 function buildBenchmarks(){
   const miniGrid=document.getElementById('bench-mini-grid');
-  const fullGrid=document.getElementById('bench-grid');
-  if(miniGrid)miniGrid.innerHTML='';
-  if(fullGrid)fullGrid.innerHTML='';
+  if(!miniGrid)return;
+  // remember which rows are open so we can restore after rebuild
+  const open=new Set(Array.from(miniGrid.querySelectorAll('.bench-expand.open')).map(el=>el.dataset.bid));
+  miniGrid.innerHTML='';
   const data=loadBench();
   BENCHMARKS.forEach(b=>{
     const entries=data[b.id]||[];
     const best=b.loBetter?(entries.length?Math.min(...entries.map(e=>e.val)):null):(entries.length?Math.max(...entries.map(e=>e.val)):null);
-    if(miniGrid){
-      const row=document.createElement('div');
-      row.className='bench-mini-row'+(best!==null?' has-data':'');
-      row.style.borderColor=best!==null?b.color:'';
-      row.innerHTML=`<span class="bm-name">${b.icon} ${b.name}</span><span class="bm-right"><span class="bm-val" style="color:${b.color}">${best!==null?best:'—'}</span><span class="bm-unit">${b.unit.split('(')[0].trim()}</span></span>`;
-      miniGrid.appendChild(row);
-    }
-    if(fullGrid){
-      const recent=entries.slice(-5).reverse().map(e=>`<span class="bench-entry">${e.date}: ${e.val}</span>`).join('');
-      const card=document.createElement('div'); card.className='bench-card'; card.style.borderLeftColor=b.color;
-      card.innerHTML=`<div class="bench-name">${b.icon} ${b.name}</div><div class="bench-unit">${b.unit}</div><div class="bench-best" style="color:${b.color}">${best!==null?best:'&mdash;'}</div><div class="bench-best-label">Personal Best</div><div class="bench-log">${recent||'<span style="font-size:0.65rem;color:#aaa">No entries yet</span>'}</div><div class="bench-input-row"><input class="bench-input" id="inp-${b.id}" type="number" placeholder="#" min="0" step="0.01"><button class="bench-btn" onclick="logBench('${b.id}')">Log</button><button class="bench-clear" onclick="clearBench('${b.id}')">Clear</button></div>`;
-      fullGrid.appendChild(card);
-    }
+    const recent=entries.slice(-5).reverse().map(e=>`<span class="bench-entry">${e.date}: ${e.val}</span>`).join('');
+    const isOpen=open.has(b.id);
+    const row=document.createElement('div');
+    row.className='bench-mini-row'+(best!==null?' has-data':'');
+    row.style.borderColor=best!==null?b.color:'';
+    row.innerHTML=`
+      <div class="bm-header" onclick="toggleBenchRow('${b.id}')">
+        <span class="bm-name">${b.icon} ${b.name}</span>
+        <span class="bm-right">
+          <span class="bm-val" style="color:${b.color}">${best!==null?best:'—'}</span>
+          <span class="bm-unit">${b.unit.split('(')[0].trim()}</span>
+          <span class="bm-chevron" id="chev-${b.id}">${isOpen?'▾':'▸'}</span>
+        </span>
+      </div>
+      <div class="bench-expand${isOpen?' open':''}" id="exp-${b.id}" data-bid="${b.id}">
+        <div class="bench-log" style="margin-bottom:5px;">${recent||'<span style="font-size:0.65rem;color:#aaa">No entries yet</span>'}</div>
+        <div class="bench-input-row">
+          <input class="bench-input" id="inp-${b.id}" type="number" placeholder="${b.unit.split('(')[0].trim()}" min="0" step="0.01" onclick="event.stopPropagation()">
+          <button class="bench-btn" onclick="event.stopPropagation();logBench('${b.id}')">Log</button>
+          <button class="bench-clear" onclick="event.stopPropagation();clearBench('${b.id}')">Clear</button>
+        </div>
+      </div>`;
+    miniGrid.appendChild(row);
   });
+}
+function toggleBenchRow(id){
+  const exp=document.getElementById('exp-'+id);
+  const chev=document.getElementById('chev-'+id);
+  const isOpen=exp.classList.toggle('open');
+  chev.textContent=isOpen?'▾':'▸';
+  if(isOpen)setTimeout(()=>document.getElementById('inp-'+id).focus(),50);
 }
 function logBench(id){
   const inp=document.getElementById('inp-'+id); const val=parseFloat(inp.value);
@@ -1338,16 +1353,17 @@ function logBench(id){
   const data=loadBench(); if(!data[id])data[id]=[];
   data[id].push({date:new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'}),val});
   saveBench(data); inp.value=''; buildBenchmarks();
+  // keep the row open after logging
+  const exp=document.getElementById('exp-'+id);
+  const chev=document.getElementById('chev-'+id);
+  if(exp){exp.classList.add('open');chev.textContent='▾';}
 }
 function clearBench(id){
-  if(!confirm('Clear '+id+'?'))return;
+  if(!confirm('Clear all entries for this exercise?'))return;
   const data=loadBench(); delete data[id]; saveBench(data); buildBenchmarks();
 }
 function clearBenchmarks(){
   if(confirm('Clear ALL benchmark data?')){try{localStorage.removeItem('owen_bench');}catch{}buildBenchmarks();}
-}
-function toggleBenchFull(){
-  document.getElementById('bench-full').classList.toggle('open');
 }
 document.getElementById('streak-container').addEventListener('click',function(e){
   const cell=e.target.closest('[data-dk]');
