@@ -149,8 +149,13 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
   align-items:center;
   justify-content:center;
   text-align:center;
-  min-height:calc(100vh - 260px);
+  flex:1;
   gap:3px;
+}
+.col4-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
 }
 .sz-label{
   font-size:0.68rem;font-weight:800;text-transform:uppercase;
@@ -439,30 +444,30 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       </div>
     </div>
 
-    <!-- CARD 4: % Accountability Ticker -->
-    <div class="ticker-card">
-      <div style="font-size:0.6rem;font-weight:800;text-transform:uppercase;color:#8aabcf;letter-spacing:.5px;">&#128202; Accountability</div>
-      <div id="ticker-pct" class="ticker-pct">0%</div>
-      <div class="ticker-label">Days Worked Out</div>
-      <div id="ticker-detail" class="ticker-detail">0 of 0 days</div>
-      <div style="width:55%;height:1px;background:rgba(255,255,255,.2);margin:8px 0;"></div>
-      <div style="font-size:0.6rem;color:#8aabcf;line-height:1.8;text-align:center;">Jun 15 &ndash; Aug 12</div>
-      <button onclick="clearStreak()" style="margin-top:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:5px;padding:4px 12px;font-size:0.62rem;cursor:pointer;color:#b8cde8;font-weight:600;">Clear</button>
-    </div>
-
-  </div>
-
-  <!-- STREAK BAR — full width spanning all 4 cards below -->
-  <div class="streak-bar">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:5px;">
-      <span style="font-size:0.63rem;font-weight:800;text-transform:uppercase;color:var(--muted);letter-spacing:.4px;">&#128293; Workout Streak &mdash; Jun 15 to Aug 12 &nbsp;&middot;&nbsp; <em style="font-weight:400;text-transform:none;">Tap a day to mark done</em></span>
-      <div style="display:flex;gap:10px;font-size:0.6rem;color:var(--muted);">
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--green);vertical-align:middle;margin-right:3px;"></span>Done</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#b0c4de;vertical-align:middle;margin-right:3px;"></span>Rest</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#e8ecf4;vertical-align:middle;margin-right:3px;"></span>Upcoming</span>
+    <!-- COLUMN 4: Accountability Ticker + Streak stacked -->
+    <div class="col4-wrap">
+      <div class="ticker-card">
+        <div style="font-size:0.6rem;font-weight:800;text-transform:uppercase;color:#8aabcf;letter-spacing:.5px;">&#128202; Accountability</div>
+        <div id="ticker-pct" class="ticker-pct">0%</div>
+        <div class="ticker-label">Days Worked Out</div>
+        <div id="ticker-detail" class="ticker-detail">0 of 0 days</div>
+        <div style="width:55%;height:1px;background:rgba(255,255,255,.2);margin:8px 0;"></div>
+        <div style="font-size:0.6rem;color:#8aabcf;line-height:1.8;text-align:center;">Jun 15 &ndash; Aug 12</div>
+        <button onclick="clearStreak()" style="margin-top:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:5px;padding:4px 12px;font-size:0.62rem;cursor:pointer;color:#b8cde8;font-weight:600;">Clear</button>
+      </div>
+      <div class="streak-bar">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:5px;">
+          <span style="font-size:0.63rem;font-weight:800;text-transform:uppercase;color:var(--muted);letter-spacing:.4px;">&#128293; Workout Streak &mdash; Jun 15 to Aug 12 &nbsp;&middot;&nbsp; <em style="font-weight:400;text-transform:none;">Tap a day to mark done</em></span>
+          <div style="display:flex;gap:10px;font-size:0.6rem;color:var(--muted);">
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--green);vertical-align:middle;margin-right:3px;"></span>Done</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#b0c4de;vertical-align:middle;margin-right:3px;"></span>Rest</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#e8ecf4;vertical-align:middle;margin-right:3px;"></span>Upcoming</span>
+          </div>
+        </div>
+        <div id="streak-container" style="display:flex;flex-wrap:wrap;align-items:center;gap:1px;"></div>
       </div>
     </div>
-    <div id="streak-container" style="display:flex;flex-wrap:wrap;align-items:center;gap:1px;"></div>
+
   </div>
 
 </div>
