@@ -1071,22 +1071,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
   <div class="section-header">&#129367; Fuel &mdash; Tap a slot to explore</div>
   <div class="tip-box"><strong>Tap any tile</strong> to see that meal slot. Tap again to collapse.</div>
 
-  <!-- FOOD QUERY TOOL -->
-  <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:14px;padding:16px 18px;margin-bottom:18px;">
-    <div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;color:#8aabcf;letter-spacing:.5px;margin-bottom:8px;">&#127919; Food Performance Checker</div>
-    <div style="font-size:0.85rem;color:white;font-weight:600;margin-bottom:10px;">Is this food good for an athlete? Type any food to find out.</div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;">
-      <input id="food-query-input" type="text" placeholder="e.g. chocolate milk, pizza, almonds, Gatorade..." 
-        style="flex:1;min-width:200px;padding:9px 13px;border-radius:8px;border:none;font-size:0.85rem;font-family:inherit;outline:none;"
-        onkeydown="if(event.key==='Enter')checkFood()">
-      <button onclick="checkFood()" 
-        style="background:var(--accent);color:var(--navy);border:none;border-radius:8px;padding:9px 20px;font-size:0.85rem;font-weight:800;cursor:pointer;white-space:nowrap;">
-        &#128269; Check It
-      </button>
-    </div>
-    <div id="food-result" style="margin-top:12px;display:none;"></div>
-  </div>
-
   <div class="fuel-tiles">
     <div class="fuel-tile" onclick="showFuel('smoothie',this)">
       <div class="ft-icon">&#129380;</div><div class="ft-label">Daily</div>
@@ -1168,6 +1152,23 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       </div>
     </div>
   </div>
+
+  <!-- FOOD QUERY TOOL -->
+  <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:14px;padding:16px 18px;margin-top:18px;">
+    <div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;color:#8aabcf;letter-spacing:.5px;margin-bottom:8px;">&#127919; Food Performance Checker</div>
+    <div style="font-size:0.85rem;color:white;font-weight:600;margin-bottom:10px;">Is this food good for an athlete? Type any food to find out.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <input id="food-query-input" type="text" placeholder="e.g. chocolate milk, pizza, almonds, Gatorade..."
+        style="flex:1;min-width:200px;padding:9px 13px;border-radius:8px;border:none;font-size:0.85rem;font-family:inherit;outline:none;"
+        onkeydown="if(event.key==='Enter')checkFood()">
+      <button onclick="checkFood()"
+        style="background:var(--accent);color:var(--navy);border:none;border-radius:8px;padding:9px 20px;font-size:0.85rem;font-weight:800;cursor:pointer;white-space:nowrap;">
+        &#128269; Check It
+      </button>
+    </div>
+    <div id="food-result" style="margin-top:12px;display:none;"></div>
+  </div>
+
 </div>
 </div>
 
