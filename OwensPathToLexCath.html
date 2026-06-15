@@ -1282,7 +1282,7 @@ function buildStreak(){
     else if(d>TODAY){cell.classList.add('future');}
     else{
       if(data[k]==='done')cell.classList.add('done');
-      cell.onclick=()=>{const d2=loadStreakData();if(d2[k]==='done')delete d2[k];else d2[k]='done';saveStreakData(d2);buildStreak();calcTicker();};
+      cell.dataset.dk=k;
     }
     if(d.getTime()===TODAY.getTime())cell.classList.add('today');
     container.appendChild(cell);
@@ -1344,6 +1344,14 @@ function clearBenchmarks(){
 function toggleBenchFull(){
   document.getElementById('bench-full').classList.toggle('open');
 }
+document.getElementById('streak-container').addEventListener('click',function(e){
+  const cell=e.target.closest('[data-dk]');
+  if(!cell)return;
+  const k=cell.dataset.dk;
+  const d2=loadStreakData();
+  if(d2[k]==='done')delete d2[k];else d2[k]='done';
+  saveStreakData(d2);buildStreak();calcTicker();
+});
 buildStreak(); calcTicker(); buildBenchmarks();
 
 
