@@ -425,13 +425,12 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
     <div class="sched-card">
       <div class="sz-label">&#128198; Weekly Rotation</div>
       <div class="card-body">
-        <div class="rot-item" style="background:#fde8e8;"><span class="rot-day">MON</span><span class="rot-label" style="color:var(--red);">&#128170; Push<span class="rot-sub">Chest &middot; Shoulders &middot; Triceps</span></span></div>
-        <div class="rot-item" style="background:#e6f6ee;"><span class="rot-day">TUE</span><span class="rot-label" style="color:var(--green);">&#9889; Speed<span class="rot-sub">Ladders &middot; Sprints &middot; HIIT</span></span></div>
-        <div class="rot-item" style="background:#e8f0fd;"><span class="rot-day">WED</span><span class="rot-label" style="color:var(--blue);">&#128257; Pull<span class="rot-label" style="color:var(--blue);"><span class="rot-sub">Back &middot; Biceps &middot; Shoulder Health</span></span></span></div>
-        <div class="rot-item" style="background:#fef3dc;"><span class="rot-day">THU</span><span class="rot-label" style="color:#9a6200;">&#128293; Core<span class="rot-sub">Rotation &middot; Med Ball &middot; Planks</span></span></div>
-        <div class="rot-item" style="background:#e0f5f3;"><span class="rot-day">FRI</span><span class="rot-label" style="color:var(--teal);">&#127919; Full Body<span class="rot-sub">Lower Body + Sport Drills</span></span></div>
-        <div class="rot-item" style="background:#f2e8fd;"><span class="rot-day">SAT</span><span class="rot-label" style="color:var(--purple);">&#129504; Flex<span class="rot-sub">Mobility &middot; Yoga &middot; Recovery</span></span></div>
-        <div class="rot-item" style="background:#f0f0f0;"><span class="rot-day">SUN</span><span class="rot-label" style="color:#888;">&#128564; Rest<span class="rot-sub">Always. No exceptions.</span></span></div>
+        <div class="rot-item" style="background:#fde8e8;"><span class="rot-day" style="font-size:0.65rem;">WKT 1</span><span class="rot-label" style="color:var(--red);">&#128170; Push<span class="rot-sub">Chest &middot; Shoulders &middot; Triceps</span></span></div>
+        <div class="rot-item" style="background:#e6f6ee;"><span class="rot-day" style="font-size:0.65rem;">WKT 2</span><span class="rot-label" style="color:var(--green);">&#9889; Speed<span class="rot-sub">Ladders &middot; Sprints &middot; HIIT</span></span></div>
+        <div class="rot-item" style="background:#e8f0fd;"><span class="rot-day" style="font-size:0.65rem;">WKT 3</span><span class="rot-label" style="color:var(--blue);">&#128257; Pull<span class="rot-sub">Back &middot; Biceps &middot; Shoulder Health</span></span></div>
+        <div class="rot-item" style="background:#fef3dc;"><span class="rot-day" style="font-size:0.65rem;">WKT 4</span><span class="rot-label" style="color:#9a6200;">&#128293; Core + Flex<span class="rot-sub">Core &middot; Rotation &middot; Mobility</span></span></div>
+        <div class="rot-item" style="background:#e0f5f3;"><span class="rot-day" style="font-size:0.65rem;">WKT 5</span><span class="rot-label" style="color:var(--teal);">&#127919; Full Body<span class="rot-sub">Lower Body + Sport Drills</span></span></div>
+        <div class="rot-item" style="background:#f0f0f0;"><span class="rot-day" style="font-size:0.65rem;">REST</span><span class="rot-label" style="color:#888;">&#128564; 2 Rest Days<span class="rot-sub">Pick any 2 days each week</span></span></div>
       </div>
     </div>
 
@@ -475,15 +474,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 <div class="container">
   <div class="phase-banner p1"><div class="phase-icon">&#127959;</div><div><div class="phase-title">Phase 1 &mdash; Foundation &middot; Jun 15 &ndash; Jun 29 (3 Weeks)</div><div class="phase-desc">Bodyweight only. Learn every movement with perfect form. 2 sets &times; 8&ndash;10 reps. HIIT: 20 sec on / 20 sec off. Every session = 60 min.</div></div></div>
   <div class="day-tabs">
-    <button class="day-tab active" onclick="showDay('p1','mon',this)">&#128170; Mon &mdash; Push</button>
-    <button class="day-tab" onclick="showDay('p1','tue',this)">&#9889; Tue &mdash; Speed</button>
-    <button class="day-tab" onclick="showDay('p1','wed',this)">&#128257; Wed &mdash; Pull</button>
-    <button class="day-tab" onclick="showDay('p1','thu',this)">&#128293; Thu &mdash; Core</button>
-    <button class="day-tab" onclick="showDay('p1','fri',this)">&#127919; Fri &mdash; Full Body</button>
-    <button class="day-tab" onclick="showDay('p1','sat',this)">&#129504; Sat &mdash; Flex</button>
+    <button class="day-tab active" onclick="showDay('p1','push',this)">&#128170; Push</button>
+    <button class="day-tab" onclick="showDay('p1','speed',this)">&#9889; Speed</button>
+    <button class="day-tab" onclick="showDay('p1','pull',this)">&#128257; Pull</button>
+    <button class="day-tab" onclick="showDay('p1','coreflex',this)">&#128293; Core + Flex</button>
+    <button class="day-tab" onclick="showDay('p1','fullbody',this)">&#127919; Full Body</button>
   </div>
-  <div class="day-panel active" id="p1-mon">
-    <div class="card push"><div class="time-block">&#8987; 60 MIN &middot; MONDAY PUSH</div>
+  <div class="day-panel active" id="p1-push">
+    <div class="card push"><div class="time-block">&#8987; 60 MIN &middot; PUSH</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Arm circles &rarr; High knees 1 min &rarr; Inchworm &times;5 &rarr; Shoulder rolls</div>
       <div class="ts ts-a"><div class="ts-label">Activation 0:07&ndash;0:12</div>Band pull-aparts &times;15 &middot; Glute bridges &times;15 &middot; Cat-cow &times;10</div>
       <div class="ts ts-m"><div class="ts-label">Main Work A 0:12&ndash;0:30 &middot; 2 sets &middot; 45 sec rest</div>
@@ -504,8 +502,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Doorway chest stretch 30 sec &middot; Cross-body shoulder 30 sec each &middot; Child's pose 45 sec &middot; Deep breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p1-tue">
-    <div class="card speed"><div class="time-block">&#8987; 60 MIN &middot; TUESDAY SPEED &amp; HIIT</div>
+  <div class="day-panel" id="p1-speed">
+    <div class="card speed"><div class="time-block">&#8987; 60 MIN &middot; SPEED &amp; HIIT</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; High knees 1 min &rarr; Butt kicks 1 min &rarr; Hip swings &rarr; Dynamic lunges &times;5</div>
       <div class="ts ts-m"><div class="ts-label">Agility Ladders 0:12&ndash;0:27</div>
         <table class="ex-table"><thead><tr><th>Drill</th><th>Sets</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -527,8 +525,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:52&ndash;1:00</div>Quad stretch &middot; Hamstring stretch &middot; Calf stretch &middot; Hip flexor lunge &middot; Box breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p1-wed">
-    <div class="card pull"><div class="time-block">&#8987; 60 MIN &middot; WEDNESDAY PULL</div>
+  <div class="day-panel" id="p1-pull">
+    <div class="card pull"><div class="time-block">&#8987; 60 MIN &middot; PULL</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Arm swings &rarr; Band pull-aparts &times;15 &rarr; Dead hang 20 sec &times;2 &rarr; Cat-cow &times;10</div>
       <div class="ts ts-m"><div class="ts-label">Main Work A 0:12&ndash;0:30 &middot; 2 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -549,30 +547,39 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Cross-body shoulder &middot; Lat stretch &middot; Child's pose &middot; Deep breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p1-thu">
-    <div class="card core"><div class="time-block">&#8987; 60 MIN &middot; THURSDAY CORE &amp; ROTATION</div>
-      <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Hip circles &rarr; World's Greatest Stretch &times;5 &rarr; Thoracic rotations &times;10</div>
+  <div class="day-panel" id="p1-coreflex">
+    <div class="card core"><div class="time-block">&#8987; 60 MIN &middot; CORE + FLEX</div>
+      <div class="ts ts-w"><div class="ts-label">Warm-Up + Quick Foam Roll 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Hip circles &rarr; World's Greatest Stretch &times;5 &rarr; Thoracic rotations &times;10 &rarr; Foam roll: Quads &middot; Upper back &middot; Glutes (30 sec each)</div>
       <div class="ts ts-a"><div class="ts-label">Activation 0:07&ndash;0:12</div><a class="ex-link" href="https://www.youtube.com/results?search_query=dead+bug+exercise+core+form" target="_blank">&#9654; Dead Bug</a> &times;10 &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=bird+dog+exercise+core+stability" target="_blank">&#9654; Bird Dog</a> &times;10 &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=glute+bridge+exercise+form" target="_blank">&#9654; Glute Bridge</a> &times;15</div>
-      <div class="ts ts-m"><div class="ts-label">Core Stability 0:12&ndash;0:30 &middot; 2 sets</div>
+      <div class="ts ts-m"><div class="ts-label">Core Stability 0:12&ndash;0:28 &middot; 2 sets &middot; 45 sec rest</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Plank</strong></td><td>2&times;30&ndash;40 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=perfect+plank+form+tutorial" target="_blank">&#9654; Perfect Plank</a></td><td><div class="pro-note">Mike Trout's trainer &mdash; braced core = faster bat through the zone.</div></td></tr>
           <tr><td><strong>Side Plank</strong></td><td>2&times;20 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=side+plank+exercise+form" target="_blank">&#9654; Side Plank</a></td><td><div class="pro-note">Lateral obliques resist forces trying to collapse your swing plane.</div></td></tr>
           <tr><td><strong>Russian Twist</strong></td><td>2&times;16 total</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=russian+twist+core+exercise" target="_blank">&#9654; Russian Twist</a></td><td><div class="pro-note">Same oblique rotation Bryce Harper fires when loading into his swing.</div></td></tr>
         </tbody></table>
       </div>
-      <div class="ts ts-m"><div class="ts-label">Rotational Power 0:30&ndash;0:46 &middot; 2 sets</div>
+      <div class="ts ts-m"><div class="ts-label">Rotational Power 0:28&ndash;0:44 &middot; 2 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Woodchop w/ Band</strong></td><td>2&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=cable+woodchop+band+exercise" target="_blank">&#9654; Woodchop</a></td><td><div class="pro-note">Tatis Jr. &mdash; diagonal power mirrors his swing AND throwing motion.</div></td></tr>
           <tr><td><strong>Pallof Press w/ Band</strong></td><td>2&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pallof+press+anti+rotation+core" target="_blank">&#9654; Pallof Press</a></td><td><div class="pro-note">Aaron Judge's trainer &mdash; anti-rotation builds barrel control.</div></td></tr>
           <tr><td><strong>Bicycle Crunch</strong></td><td>2&times;16 total</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=bicycle+crunch+form+obliques" target="_blank">&#9654; Bicycle Crunch</a></td><td><div class="pro-note">Oblique-to-hip chain &mdash; same muscles a pitcher fires in hip-to-shoulder rotation.</div></td></tr>
         </tbody></table>
       </div>
-      <div class="ts ts-f"><div class="ts-label">&#128293; Finisher 0:46&ndash;0:54</div><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+shoulder+separation+baseball+drill" target="_blank">&#9654; Hip-Shoulder Separation Drill</a> &times;12 reps &times;2 sets</div>
-      <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Pigeon pose 40 sec each &middot; Thoracic rotation &middot; Child's pose &middot; Deep breathing</div>
+      <div class="ts ts-f"><div class="ts-label">Hip-Shoulder Sep. 0:44&ndash;0:48</div><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+shoulder+separation+baseball+drill" target="_blank">&#9654; Hip-Shoulder Separation Drill</a> &times;12 reps &times;2 sets</div>
+      <div class="ts ts-w"><div class="ts-label">Mobility Flow 0:48&ndash;0:57</div>
+        <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th><th>&#9918; Why It Matters</th></tr></thead><tbody>
+          <tr><td><strong>90/90 Hip Stretch</strong></td><td>90 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td><td><div class="pro-note">Hip internal rotation = foundation of hip-to-shoulder separation in a swing.</div></td></tr>
+          <tr><td><strong>Thoracic Spine Rotation</strong></td><td>10 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=thoracic+spine+rotation+mobility+exercise" target="_blank">&#9654; T-Spine Rotation</a></td><td><div class="pro-note">Bryce Harper's trainer &mdash; mobile t-spine = more bat speed.</div></td></tr>
+          <tr><td><strong>Hip Flexor Lunge Stretch</strong></td><td>45 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+flexor+lunge+stretch" target="_blank">&#9654; Hip Flexor Stretch</a></td><td><div class="pro-note">Tight hip flexors kill stride length for pitchers and hitters.</div></td></tr>
+          <tr><td><strong>Band External Rotation</strong></td><td>10 reps each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+external+rotation+shoulder+exercise" target="_blank">&#9654; Band External Rotation</a></td><td><div class="pro-note">Protects the throwing shoulder &mdash; non-negotiable for baseball players.</div></td></tr>
+          <tr><td><strong>Sun Salutation Flow</strong></td><td>3 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td><td><div class="pro-note">Harper does yoga off-season. Calls it essential for 162-game durability.</div></td></tr>
+        </tbody></table>
+      </div>
+      <div class="ts ts-c"><div class="ts-label">Cool-Down 0:57&ndash;1:00</div>Child's pose 45 sec &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a> 3 min</div>
     </div>
   </div>
-  <div class="day-panel" id="p1-fri">
-    <div class="card sport"><div class="time-block">&#8987; 60 MIN &middot; FRIDAY FULL BODY + SPORT</div>
+  <div class="day-panel" id="p1-fullbody">
+    <div class="card sport"><div class="time-block">&#8987; 60 MIN &middot; FULL BODY + SPORT</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Dynamic leg swings &rarr; Hip circles &rarr; Inchworm &times;5 &rarr; Lateral shuffle &times;2 lengths</div>
       <div class="ts ts-m"><div class="ts-label">Lower Body 0:12&ndash;0:32 &middot; 2 sets &times;10</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -593,20 +600,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:55&ndash;1:00</div>Quad stretch &middot; Hamstring stretch &middot; Hip flexor lunge &middot; Child's pose</div>
     </div>
   </div>
-  <div class="day-panel" id="p1-sat">
-    <div class="card flex"><div class="time-block">&#8987; 45&ndash;60 MIN &middot; SATURDAY FLEX</div>
-      <div class="ts ts-w"><div class="ts-label">Foam Roll First &mdash; 10 min</div><a class="ex-link" href="https://www.youtube.com/results?search_query=foam+rolling+full+body+guide" target="_blank">&#9654; Foam Rolling Guide</a> &mdash; Quads &middot; IT Band &middot; Upper back &middot; Calves &middot; Glutes</div>
-      <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th><th>&#9918; Why It Matters</th></tr></thead><tbody>
-        <tr><td><strong>World's Greatest Stretch</strong></td><td>5 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+tutorial" target="_blank">&#9654; World's Greatest</a></td><td><div class="pro-note">MLB daily warm-up. Opens hips, thoracic spine, and hamstrings.</div></td></tr>
-        <tr><td><strong>90/90 Hip Stretch</strong></td><td>90 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td><td><div class="pro-note">Hip internal rotation = foundation of hip-to-shoulder separation in a swing.</div></td></tr>
-        <tr><td><strong>Thoracic Spine Rotation</strong></td><td>10 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=thoracic+spine+rotation+mobility+exercise" target="_blank">&#9654; T-Spine Rotation</a></td><td><div class="pro-note">Bryce Harper's trainer &mdash; mobile t-spine = more bat speed.</div></td></tr>
-        <tr><td><strong>Hip Flexor Lunge Stretch</strong></td><td>45 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+flexor+lunge+stretch" target="_blank">&#9654; Hip Flexor Stretch</a></td><td><div class="pro-note">Tight hip flexors kill stride length for both pitchers and hitters.</div></td></tr>
-        <tr><td><strong>Band External Rotation</strong></td><td>10 reps each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+external+rotation+shoulder+exercise" target="_blank">&#9654; Band External Rotation</a></td><td><div class="pro-note">Protects the throwing shoulder &mdash; non-negotiable for baseball players.</div></td></tr>
-        <tr><td><strong>Sun Salutation Flow</strong></td><td>5 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td><td><div class="pro-note">Harper does yoga off-season. Calls it essential for 162-game durability.</div></td></tr>
-        <tr><td><strong>Box Breathing</strong></td><td>5 min</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a></td><td><div class="pro-note">Aaron Judge uses mental conditioning as part of his daily routine.</div></td></tr>
-      </tbody></table>
-    </div>
-  </div>
 </div>
 </div>
 
@@ -615,15 +608,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 <div class="container">
   <div class="phase-banner p2"><div class="phase-icon">&#11014;</div><div><div class="phase-title">Phase 2 &mdash; Build &middot; Jun 30 &ndash; Jul 20 (3 Weeks)</div><div class="phase-desc">Add light dumbbells (5&ndash;15 lb) and bands. 3 sets &times; 10&ndash;12 reps. HIIT: 30s on/15s off. Medicine ball rotational work begins.</div></div></div>
   <div class="day-tabs">
-    <button class="day-tab active" onclick="showDay('p2','mon',this)">&#128170; Mon &mdash; Push</button>
-    <button class="day-tab" onclick="showDay('p2','tue',this)">&#9889; Tue &mdash; Speed</button>
-    <button class="day-tab" onclick="showDay('p2','wed',this)">&#128257; Wed &mdash; Pull</button>
-    <button class="day-tab" onclick="showDay('p2','thu',this)">&#128293; Thu &mdash; Core</button>
-    <button class="day-tab" onclick="showDay('p2','fri',this)">&#127919; Fri &mdash; Full Body</button>
-    <button class="day-tab" onclick="showDay('p2','sat',this)">&#129504; Sat &mdash; Flex</button>
+    <button class="day-tab active" onclick="showDay('p2','push',this)">&#128170; Push</button>
+    <button class="day-tab" onclick="showDay('p2','speed',this)">&#9889; Speed</button>
+    <button class="day-tab" onclick="showDay('p2','pull',this)">&#128257; Pull</button>
+    <button class="day-tab" onclick="showDay('p2','coreflex',this)">&#128293; Core + Flex</button>
+    <button class="day-tab" onclick="showDay('p2','fullbody',this)">&#127919; Full Body</button>
   </div>
-  <div class="day-panel active" id="p2-mon">
-    <div class="card push"><div class="time-block">&#8987; 60 MIN &middot; MONDAY PUSH &middot; Add 5&ndash;10 lb DB</div>
+  <div class="day-panel active" id="p2-push">
+    <div class="card push"><div class="time-block">&#8987; 60 MIN &middot; PUSH &middot; Add 5&ndash;10 lb DB</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Arm swings &rarr; Inchworm &times;6 &rarr; Band pull-aparts &times;15</div>
       <div class="ts ts-m"><div class="ts-label">Main Work A 0:12&ndash;0:30 &middot; 3 sets &middot; 45 sec rest</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -643,8 +635,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Chest opener &middot; Shoulder stretch &middot; Child's pose &middot; Deep breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p2-tue">
-    <div class="card speed"><div class="time-block">&#8987; 60 MIN &middot; TUESDAY SPEED &amp; HIIT &middot; Phase 2 Upgrade</div>
+  <div class="day-panel" id="p2-speed">
+    <div class="card speed"><div class="time-block">&#8987; 60 MIN &middot; SPEED &amp; HIIT &middot; Phase 2 Upgrade</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; High knees 1 min &rarr; Butt kicks 1 min &rarr; Hip swings &rarr; Dynamic lunges &times;5</div>
       <div class="ts ts-m"><div class="ts-label">Agility Ladders 0:12&ndash;0:27 &middot; 4 rounds each (was 3)</div>
         <table class="ex-table"><thead><tr><th>Drill</th><th>Sets</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -666,8 +658,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:52&ndash;1:00</div>Quad stretch &middot; Hamstring stretch &middot; Calf stretch &middot; Hip flexor lunge &middot; Box breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p2-wed">
-    <div class="card pull"><div class="time-block">&#8987; 60 MIN &middot; WEDNESDAY PULL &middot; 10&ndash;15 lb DB</div>
+  <div class="day-panel" id="p2-pull">
+    <div class="card pull"><div class="time-block">&#8987; 60 MIN &middot; PULL &middot; 10&ndash;15 lb DB</div>
       <div class="ts ts-m"><div class="ts-label">Main Work A 0:12&ndash;0:30 &middot; 3 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>DB Bent-Over Row (10&ndash;15 lb)</strong></td><td>3&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=dumbbell+bent+over+row+form" target="_blank">&#9654; DB Row Form</a></td><td><div class="pro-note">Aaron Judge does heavy rows off-season. Back strength powers every throw and swing.</div></td></tr>
@@ -687,16 +679,18 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Shoulder stretch &middot; Lat stretch &middot; Child's pose &middot; Box breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p2-thu">
-    <div class="card core"><div class="time-block">&#8987; 60 MIN &middot; THURSDAY CORE + MED BALL (4&ndash;6 lb)</div>
-      <div class="ts ts-m"><div class="ts-label">Core Stability 0:12&ndash;0:30 &middot; 3 sets</div>
+  <div class="day-panel" id="p2-coreflex">
+    <div class="card core"><div class="time-block">&#8987; 60 MIN &middot; CORE + FLEX &middot; Phase 2 Upgrade</div>
+      <div class="ts ts-w"><div class="ts-label">Warm-Up + Quick Foam Roll 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Hip circles &rarr; World's Greatest Stretch &times;5 &rarr; Thoracic rotations &times;10 &rarr; Foam roll: Quads &middot; IT Band &middot; Upper back (30 sec each)</div>
+      <div class="ts ts-a"><div class="ts-label">Activation 0:07&ndash;0:12</div><a class="ex-link" href="https://www.youtube.com/results?search_query=dead+bug+exercise+core+form" target="_blank">&#9654; Dead Bug</a> &times;10 &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=bird+dog+exercise+core+stability" target="_blank">&#9654; Bird Dog</a> &times;10 &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=glute+bridge+exercise+form" target="_blank">&#9654; Glute Bridge</a> &times;15</div>
+      <div class="ts ts-m"><div class="ts-label">Core Stability 0:12&ndash;0:28 &middot; 3 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Plank</strong></td><td>3&times;40 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=perfect+plank+form+tutorial" target="_blank">&#9654; Perfect Plank</a></td><td><div class="pro-note">Mike Trout's trainer &mdash; plank is the foundation of every core session.</div></td></tr>
           <tr><td><strong>Side Plank</strong></td><td>3&times;25 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=side+plank+exercise+form" target="_blank">&#9654; Side Plank</a></td><td><div class="pro-note">Lateral obliques resist forces that collapse your swing plane.</div></td></tr>
           <tr><td><strong>Russian Twist (light ball)</strong></td><td>3&times;20 total</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=russian+twist+core+exercise" target="_blank">&#9654; Russian Twist</a></td><td><div class="pro-note">Bryce Harper loads the same obliques before his swing.</div></td></tr>
         </tbody></table>
       </div>
-      <div class="ts ts-m"><div class="ts-label">Rotational Power 0:30&ndash;0:46 &middot; 3 sets</div>
+      <div class="ts ts-m"><div class="ts-label">Rotational Power + Med Ball 0:28&ndash;0:44 &middot; 3 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Med Ball Rotational Wall Throw</strong></td><td>3&times;8 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=medicine+ball+rotational+throw+wall" target="_blank">&#9654; Med Ball Throw</a></td><td><div class="pro-note">Bryce Harper's scoop toss &mdash; single best bat-speed builder.</div></td></tr>
           <tr><td><strong>Woodchop w/ Band</strong></td><td>3&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=cable+woodchop+band+exercise" target="_blank">&#9654; Woodchop</a></td><td><div class="pro-note">Tatis Jr. &mdash; diagonal power mirrors his swing AND throw.</div></td></tr>
@@ -704,12 +698,21 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
           <tr><td><strong>Hip Thrust</strong></td><td>3&times;12</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+thrust+exercise+form" target="_blank">&#9654; Hip Thrust</a></td><td><div class="pro-note">Back-leg glute drives the back hip through the hitting zone.</div></td></tr>
         </tbody></table>
       </div>
-      <div class="ts ts-f"><div class="ts-label">&#128293; Finisher 0:46&ndash;0:54</div><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+shoulder+separation+baseball+drill" target="_blank">&#9654; Hip-Shoulder Sep.</a> &times;15 &rarr; <a class="ex-link" href="https://www.youtube.com/results?search_query=medicine+ball+wall+throw+exercise" target="_blank">&#9654; Med Ball Wall Throw</a> &times;8 each</div>
-      <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Pigeon pose 45 sec each &middot; Thoracic rotation &middot; Child's pose &middot; Deep breathing</div>
+      <div class="ts ts-f"><div class="ts-label">Finisher 0:44&ndash;0:48</div><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+shoulder+separation+baseball+drill" target="_blank">&#9654; Hip-Shoulder Sep.</a> &times;15 &rarr; <a class="ex-link" href="https://www.youtube.com/results?search_query=medicine+ball+wall+throw+exercise" target="_blank">&#9654; Med Ball Wall Throw</a> &times;8 each</div>
+      <div class="ts ts-w"><div class="ts-label">Mobility Flow 0:48&ndash;0:57</div>
+        <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th><th>&#9918; Why It Matters</th></tr></thead><tbody>
+          <tr><td><strong>World's Greatest Stretch</strong></td><td>5 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+tutorial" target="_blank">&#9654; World's Greatest</a></td><td><div class="pro-note">MLB daily warm-up. Opens hips, thoracic spine, and hamstrings.</div></td></tr>
+          <tr><td><strong>90/90 Hip Stretch</strong></td><td>2 min each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td><td><div class="pro-note">Hip internal rotation = foundation of hip-to-shoulder separation. Extra set this phase.</div></td></tr>
+          <tr><td><strong>Hip Flexor Lunge Stretch</strong></td><td>55 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+flexor+lunge+stretch" target="_blank">&#9654; Hip Flexor Stretch</a></td><td><div class="pro-note">Tight hip flexors kill stride length for pitchers and hitters.</div></td></tr>
+          <tr><td><strong>Band External Rotation</strong></td><td>10 reps each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+external+rotation+shoulder+exercise" target="_blank">&#9654; Band External Rotation</a></td><td><div class="pro-note">Protects the throwing shoulder &mdash; non-negotiable for baseball players.</div></td></tr>
+          <tr><td><strong>Sun Salutation Flow</strong></td><td>3 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td><td><div class="pro-note">Harper does yoga off-season. Essential for 162-game durability.</div></td></tr>
+        </tbody></table>
+      </div>
+      <div class="ts ts-c"><div class="ts-label">Cool-Down 0:57&ndash;1:00</div>Pigeon pose 45 sec each &middot; Thoracic rotation &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a> 3 min</div>
     </div>
   </div>
-  <div class="day-panel" id="p2-fri">
-    <div class="card sport"><div class="time-block">&#8987; 60 MIN &middot; FRIDAY FULL BODY + SPORT &middot; Phase 2 Upgrade</div>
+  <div class="day-panel" id="p2-fullbody">
+    <div class="card sport"><div class="time-block">&#8987; 60 MIN &middot; FULL BODY + SPORT &middot; Phase 2 Upgrade</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Dynamic leg swings &rarr; Hip circles &rarr; Inchworm &times;5 &rarr; Lateral shuffle &times;2 lengths</div>
       <div class="ts ts-m"><div class="ts-label">Lower Body 0:12&ndash;0:32 &middot; 3 sets &times;12 (was 2&times;10) &middot; Add 8&ndash;10 lb DB</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -730,20 +733,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:55&ndash;1:00</div>Quad stretch &middot; Hamstring stretch &middot; Hip flexor lunge &middot; Child's pose</div>
     </div>
   </div>
-  <div class="day-panel" id="p2-sat">
-    <div class="card flex"><div class="time-block">&#8987; 50&ndash;60 MIN &middot; SATURDAY FLEX &middot; Phase 2 Upgrade</div>
-      <div class="ts ts-w"><div class="ts-label">Foam Roll First &mdash; 10 min</div><a class="ex-link" href="https://www.youtube.com/results?search_query=foam+rolling+full+body+guide" target="_blank">&#9654; Foam Rolling Guide</a> &mdash; Quads &middot; IT Band &middot; Upper back &middot; Calves &middot; Glutes</div>
-      <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th><th>&#9918; Why It Matters</th></tr></thead><tbody>
-        <tr><td><strong>World's Greatest Stretch</strong></td><td>5 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+tutorial" target="_blank">&#9654; World's Greatest</a></td><td><div class="pro-note">MLB daily warm-up. Opens hips, thoracic spine, and hamstrings.</div></td></tr>
-        <tr><td><strong>90/90 Hip Stretch</strong></td><td>2 min each (extra set)</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td><td><div class="pro-note">Hip internal rotation = foundation of hip-to-shoulder separation in a swing. Extra set this phase.</div></td></tr>
-        <tr><td><strong>Thoracic Spine Rotation</strong></td><td>10 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=thoracic+spine+rotation+mobility+exercise" target="_blank">&#9654; T-Spine Rotation</a></td><td><div class="pro-note">Bryce Harper's trainer &mdash; mobile t-spine = more bat speed.</div></td></tr>
-        <tr><td><strong>Hip Flexor Lunge Stretch</strong></td><td>55 sec each (10 sec longer)</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+flexor+lunge+stretch" target="_blank">&#9654; Hip Flexor Stretch</a></td><td><div class="pro-note">Tight hip flexors kill stride length for both pitchers and hitters.</div></td></tr>
-        <tr><td><strong>Band External Rotation</strong></td><td>10 reps each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+external+rotation+shoulder+exercise" target="_blank">&#9654; Band External Rotation</a></td><td><div class="pro-note">Protects the throwing shoulder &mdash; non-negotiable for baseball players.</div></td></tr>
-        <tr><td><strong>Sun Salutation Flow</strong></td><td>5 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td><td><div class="pro-note">Harper does yoga off-season. Calls it essential for 162-game durability.</div></td></tr>
-        <tr><td><strong>Box Breathing</strong></td><td>5 min</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a></td><td><div class="pro-note">Mental focus training &mdash; Aaron Judge uses mental conditioning daily.</div></td></tr>
-      </tbody></table>
-    </div>
-  </div>
 </div>
 </div>
 
@@ -752,15 +741,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 <div class="container">
   <div class="phase-banner p3"><div class="phase-icon">&#128293;</div><div><div class="phase-title">Phase 3 &mdash; Moving Forward &middot; Jul 21 &ndash; Aug 12 (3 Weeks)</div><div class="phase-desc">Peak summer athleticism. 3&ndash;4 sets &times;12 reps. TABATA 20s on/10s off &times;8 rounds. Plyometrics + explosive output.</div></div></div>
   <div class="day-tabs">
-    <button class="day-tab active" onclick="showDay('p3','mon',this)">&#128170; Mon &mdash; Push</button>
-    <button class="day-tab" onclick="showDay('p3','tue',this)">&#9889; Tue &mdash; Speed</button>
-    <button class="day-tab" onclick="showDay('p3','wed',this)">&#128257; Wed &mdash; Pull</button>
-    <button class="day-tab" onclick="showDay('p3','thu',this)">&#128293; Thu &mdash; Core</button>
-    <button class="day-tab" onclick="showDay('p3','fri',this)">&#127919; Fri &mdash; Full Body</button>
-    <button class="day-tab" onclick="showDay('p3','sat',this)">&#129504; Sat &mdash; Flex</button>
+    <button class="day-tab active" onclick="showDay('p3','push',this)">&#128170; Push</button>
+    <button class="day-tab" onclick="showDay('p3','speed',this)">&#9889; Speed</button>
+    <button class="day-tab" onclick="showDay('p3','pull',this)">&#128257; Pull</button>
+    <button class="day-tab" onclick="showDay('p3','coreflex',this)">&#128293; Core + Flex</button>
+    <button class="day-tab" onclick="showDay('p3','fullbody',this)">&#127919; Full Body</button>
   </div>
-  <div class="day-panel active" id="p3-mon">
-    <div class="card push"><div class="time-block">&#8987; 60 MIN &middot; MONDAY PUSH &middot; Peak Power</div>
+  <div class="day-panel active" id="p3-push">
+    <div class="card push"><div class="time-block">&#8987; 60 MIN &middot; PUSH &middot; Peak Power</div>
       <div class="ts ts-m"><div class="ts-label">Main Work A 0:12&ndash;0:30 &middot; 3&ndash;4 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Explosive / Clap Push-Up</strong></td><td>3&times;6</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=explosive+clap+push+up+tutorial" target="_blank">&#9654; Explosive Push-Up</a></td><td><div class="pro-note">Fast-twitch recruitment &mdash; same power Aaron Judge generates in tire jump training.</div></td></tr>
@@ -779,8 +767,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Chest/shoulder stretch &middot; Hip flexor lunge &middot; Child's pose &middot; Box breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p3-tue">
-    <div class="card speed"><div class="time-block">&#8987; 60 MIN &middot; TUESDAY SPEED &middot; Phase 3 Peak</div>
+  <div class="day-panel" id="p3-speed">
+    <div class="card speed"><div class="time-block">&#8987; 60 MIN &middot; SPEED &middot; Phase 3 Peak</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; High knees 1 min &rarr; Butt kicks 1 min &rarr; Hip swings &rarr; Dynamic lunges &times;5</div>
       <div class="ts ts-m"><div class="ts-label">Agility Ladders 0:12&ndash;0:27 &middot; 4 rounds each</div>
         <table class="ex-table"><thead><tr><th>Drill</th><th>Sets</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -803,8 +791,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:52&ndash;1:00</div>Quad stretch &middot; Hamstring stretch &middot; Calf stretch &middot; Hip flexor lunge &middot; Box breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p3-wed">
-    <div class="card pull"><div class="time-block">&#8987; 60 MIN &middot; WEDNESDAY PULL &middot; Peak</div>
+  <div class="day-panel" id="p3-pull">
+    <div class="card pull"><div class="time-block">&#8987; 60 MIN &middot; PULL &middot; Peak</div>
       <div class="ts ts-m"><div class="ts-label">Main Work A 0:12&ndash;0:30 &middot; 3&ndash;4 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Pull-Up (weighted backpack)</strong></td><td>4&times;6</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pull+up+progression+guide" target="_blank">&#9654; Pull-Up Mastery</a></td><td><div class="pro-note">Mike Trout does weighted pull-ups off-season &mdash; peak pulling strength.</div></td></tr>
@@ -817,9 +805,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Shoulder stretch &middot; Lat stretch &middot; Child's pose &middot; Box breathing</div>
     </div>
   </div>
-  <div class="day-panel" id="p3-thu">
-    <div class="card core"><div class="time-block">&#8987; 60 MIN &middot; THURSDAY CORE &middot; Peak Rotation</div>
-      <div class="ts ts-m"><div class="ts-label">Core + Rotation 0:12&ndash;0:46 &middot; 3&ndash;4 sets</div>
+  <div class="day-panel" id="p3-coreflex">
+    <div class="card core"><div class="time-block">&#8987; 60 MIN &middot; CORE + FLEX &middot; Phase 3 Peak</div>
+      <div class="ts ts-w"><div class="ts-label">Warm-Up + Foam Roll 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Hip circles &rarr; World's Greatest Stretch &times;5 &rarr; Thoracic rotations &times;10 &rarr; Foam roll: Quads &middot; IT Band &middot; Upper back &middot; Glutes (1 min each)</div>
+      <div class="ts ts-m"><div class="ts-label">Core + Rotation 0:07&ndash;0:44 &middot; 3&ndash;4 sets</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Plank</strong></td><td>3&times;50 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=perfect+plank+form+tutorial" target="_blank">&#9654; Perfect Plank</a></td><td><div class="pro-note">Mike Trout &mdash; non-negotiable core foundation.</div></td></tr>
           <tr><td><strong>Hollow Body Hold</strong></td><td>3&times;20 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hollow+body+hold+core+exercise" target="_blank">&#9654; Hollow Body</a></td><td><div class="pro-note">Full core tension &mdash; same position as the top of a baseball swing.</div></td></tr>
@@ -829,12 +818,22 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
           <tr><td><strong>Hip Thrust</strong></td><td>3&times;12</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+thrust+exercise+form" target="_blank">&#9654; Hip Thrust</a></td><td><div class="pro-note">Back-leg glute drives the hip through the hitting zone.</div></td></tr>
         </tbody></table>
       </div>
-      <div class="ts ts-f"><div class="ts-label">&#128293; TABATA Finisher 0:46&ndash;0:54</div><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+shoulder+separation+baseball+drill" target="_blank">&#9654; Hip-Shoulder Sep.</a> &times;15 &rarr; <a class="ex-link" href="https://www.youtube.com/results?search_query=medicine+ball+wall+throw+exercise" target="_blank">&#9654; Med Ball Wall Throw</a> &times;10 each</div>
-      <div class="ts ts-c"><div class="ts-label">Cool-Down 0:54&ndash;1:00</div>Pigeon pose 45 sec each &middot; Thoracic rotation &middot; Child's pose &middot; Deep breathing</div>
+      <div class="ts ts-f"><div class="ts-label">Finisher 0:44&ndash;0:48</div><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+shoulder+separation+baseball+drill" target="_blank">&#9654; Hip-Shoulder Sep.</a> &times;15 &rarr; <a class="ex-link" href="https://www.youtube.com/results?search_query=medicine+ball+wall+throw+exercise" target="_blank">&#9654; Med Ball Wall Throw</a> &times;10 each</div>
+      <div class="ts ts-w"><div class="ts-label">Mobility Flow 0:48&ndash;0:57</div>
+        <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th><th>&#9918; Why It Matters</th></tr></thead><tbody>
+          <tr><td><strong>90/90 Hip Stretch</strong></td><td>105 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td><td><div class="pro-note">Hip internal rotation = foundation of hip-to-shoulder separation in a swing.</div></td></tr>
+          <tr><td><strong>Thoracic Spine Rotation</strong></td><td>10 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=thoracic+spine+rotation+mobility+exercise" target="_blank">&#9654; T-Spine Rotation</a></td><td><div class="pro-note">Bryce Harper's trainer &mdash; mobile t-spine = more bat speed.</div></td></tr>
+          <tr><td><strong>Hip Flexor Lunge Stretch</strong></td><td>60 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+flexor+lunge+stretch" target="_blank">&#9654; Hip Flexor Stretch</a></td><td><div class="pro-note">Tight hip flexors kill stride length for pitchers and hitters.</div></td></tr>
+          <tr><td><strong>Band External Rotation</strong></td><td>10 reps each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+external+rotation+shoulder+exercise" target="_blank">&#9654; Band External Rotation</a></td><td><div class="pro-note">Protects the throwing shoulder &mdash; non-negotiable for baseball players.</div></td></tr>
+          <tr><td><strong>Prone Y/T/W</strong></td><td>2&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=prone+YTW+shoulder+exercise+form" target="_blank">&#9654; Prone Y/T/W</a></td><td><div class="pro-note">MLB pitchers use prone Y/T/W for scapular stability and rotator cuff endurance.</div></td></tr>
+          <tr><td><strong>Sun Salutation Flow</strong></td><td>3 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td><td><div class="pro-note">Harper does yoga off-season. Essential for 162-game durability.</div></td></tr>
+        </tbody></table>
+      </div>
+      <div class="ts ts-c"><div class="ts-label">Cool-Down 0:57&ndash;1:00</div>Pigeon pose 45 sec each &middot; Child's pose &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a> 3 min</div>
     </div>
   </div>
-  <div class="day-panel" id="p3-fri">
-    <div class="card sport"><div class="time-block">&#8987; 60 MIN &middot; FRIDAY FULL BODY + SPORT &middot; Phase 3 Peak</div>
+  <div class="day-panel" id="p3-fullbody">
+    <div class="card sport"><div class="time-block">&#8987; 60 MIN &middot; FULL BODY + SPORT &middot; Phase 3 Peak</div>
       <div class="ts ts-w"><div class="ts-label">Warm-Up 0:00&ndash;0:07</div>Jump rope 2 min &rarr; Dynamic leg swings &rarr; Hip circles &rarr; Inchworm &times;5 &rarr; Lateral shuffle &times;2 lengths</div>
       <div class="ts ts-m"><div class="ts-label">Lower Body 0:12&ndash;0:32 &middot; 3&ndash;4 sets &times;12 &middot; Add DB weight</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
@@ -855,21 +854,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
       <div class="ts ts-c"><div class="ts-label">Cool-Down 0:55&ndash;1:00</div>Quad stretch &middot; Hamstring stretch &middot; Hip flexor lunge &middot; Child's pose</div>
     </div>
   </div>
-  <div class="day-panel" id="p3-sat">
-    <div class="card flex"><div class="time-block">&#8987; 60 MIN &middot; SATURDAY FLEX &middot; Phase 3 Peak</div>
-      <div class="ts ts-w"><div class="ts-label">Foam Roll First &mdash; 10 min</div><a class="ex-link" href="https://www.youtube.com/results?search_query=foam+rolling+full+body+guide" target="_blank">&#9654; Foam Rolling Guide</a> &mdash; Quads &middot; IT Band &middot; Upper back &middot; Calves &middot; Glutes (1&ndash;2 min each)</div>
-      <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th><th>&#9918; Why It Matters</th></tr></thead><tbody>
-        <tr><td><strong>World's Greatest Stretch</strong></td><td>5 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+tutorial" target="_blank">&#9654; World's Greatest</a></td><td><div class="pro-note">MLB daily warm-up. Opens hips, thoracic spine, and hamstrings simultaneously.</div></td></tr>
-        <tr><td><strong>90/90 Hip Stretch</strong></td><td>105 sec each (15 sec longer)</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td><td><div class="pro-note">Hip internal rotation = foundation of hip-to-shoulder separation in a swing.</div></td></tr>
-        <tr><td><strong>Thoracic Spine Rotation</strong></td><td>10 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=thoracic+spine+rotation+mobility+exercise" target="_blank">&#9654; T-Spine Rotation</a></td><td><div class="pro-note">Bryce Harper's trainer &mdash; mobile t-spine = more bat speed.</div></td></tr>
-        <tr><td><strong>Hip Flexor Lunge Stretch</strong></td><td>60 sec each (15 sec longer)</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+flexor+lunge+stretch" target="_blank">&#9654; Hip Flexor Stretch</a></td><td><div class="pro-note">Tight hip flexors kill stride length for both pitchers and hitters.</div></td></tr>
-        <tr><td><strong>Band External Rotation</strong></td><td>10 reps each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+external+rotation+shoulder+exercise" target="_blank">&#9654; Band External Rotation</a></td><td><div class="pro-note">Protects the throwing shoulder &mdash; non-negotiable for baseball players.</div></td></tr>
-        <tr><td><strong>Prone Y/T/W</strong></td><td>2&times;10 (new this phase)</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=prone+YTW+shoulder+exercise+form" target="_blank">&#9654; Prone Y/T/W</a></td><td><div class="pro-note">MLB pitchers use prone Y/T/W for scapular stability and rotator cuff endurance.</div></td></tr>
-        <tr><td><strong>Sun Salutation Flow</strong></td><td>5 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td><td><div class="pro-note">Harper does yoga off-season. Calls it essential for 162-game durability.</div></td></tr>
-        <tr><td><strong>Box Breathing</strong></td><td>5 min</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a></td><td><div class="pro-note">Mental focus training &mdash; Aaron Judge uses mental conditioning daily.</div></td></tr>
-      </tbody></table>
-    </div>
-  </div>
 </div>
 </div>
 
@@ -888,15 +872,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
   <div class="p4-panel active" id="p4-i1">
     <div class="p4-block"><div class="p4-block-title">Interval 1 &mdash; Re-establish Base</div><div class="p4-block-sub">Moderate intensity. Emphasis on hip loading and rotational foundation. Add 2&ndash;5 lb from Phase 3.</div></div>
     <div class="day-tabs">
-      <button class="day-tab active" onclick="showDay('p4i1','mon',this)">&#128170; Mon</button>
-      <button class="day-tab" onclick="showDay('p4i1','tue',this)">&#9889; Tue</button>
-      <button class="day-tab" onclick="showDay('p4i1','wed',this)">&#128257; Wed</button>
-      <button class="day-tab" onclick="showDay('p4i1','thu',this)">&#128293; Thu</button>
-      <button class="day-tab" onclick="showDay('p4i1','fri',this)">&#127919; Fri</button>
-      <button class="day-tab" onclick="showDay('p4i1','sat',this)">&#129504; Sat</button>
+      <button class="day-tab active" onclick="showDay('p4i1','push',this)">&#128170; Push</button>
+      <button class="day-tab" onclick="showDay('p4i1','speed',this)">&#9889; Speed</button>
+      <button class="day-tab" onclick="showDay('p4i1','pull',this)">&#128257; Pull</button>
+      <button class="day-tab" onclick="showDay('p4i1','coreflex',this)">&#128293; Core + Flex</button>
+      <button class="day-tab" onclick="showDay('p4i1','fullbody',this)">&#127919; Full Body</button>
     </div>
-    <div class="day-panel active" id="p4i1-mon">
-      <div class="card p4"><div class="time-block">MON &middot; PUSH + Shoulder Stability</div>
+    <div class="day-panel active" id="p4i1-push">
+      <div class="card p4"><div class="time-block">PUSH + Shoulder Stability</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Push-Up Variations</strong></td><td>3&times;12</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=perfect+push+up+form+tutorial" target="_blank">&#9654; Push-Up</a></td><td><div class="pro-note">Aaron Judge &mdash; foundation of every MLB upper body program.</div></td></tr>
           <tr><td><strong>DB Shoulder Press (8&ndash;10 lb)</strong></td><td>3&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=dumbbell+shoulder+press+form" target="_blank">&#9654; DB Shoulder Press</a></td><td><div class="pro-note">Bryce Harper &mdash; shoulder press every session, no exceptions.</div></td></tr>
@@ -906,9 +889,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         <div class="ts ts-f" style="margin-top:8px;"><div class="ts-label">&#128293; TABATA Finisher &middot; 20s/10s &times;8 rounds</div><a class="ex-link" href="https://www.youtube.com/results?search_query=jump+squat+plyometric+form" target="_blank">&#9654; Squat Jumps</a></div>
       </div>
     </div>
-    <div class="day-panel" id="p4i1-tue"><div class="tip-box"><strong>Speed &mdash; Same format as Phase 3 Tuesday.</strong> Full ladder circuit 15 min &middot; 60-ft dash 4 runs &middot; Box jump 18 in 3&times;5 &middot; Broad jump 5 reps &middot; TABATA finisher Squat Jumps 20s/10s &times;8.</div></div>
-    <div class="day-panel" id="p4i1-wed">
-      <div class="card pull"><div class="time-block">WED &middot; PULL + Rotator Cuff</div>
+    <div class="day-panel" id="p4i1-speed"><div class="tip-box"><strong>Speed &mdash; Same format as Phase 3 Speed.</strong> Full ladder circuit 15 min &middot; 60-ft dash 4 runs &middot; Box jump 18 in 3&times;5 &middot; Broad jump 5 reps &middot; TABATA finisher Squat Jumps 20s/10s &times;8.</div></div>
+    <div class="day-panel" id="p4i1-pull">
+      <div class="card pull"><div class="time-block">PULL + Rotator Cuff</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Pull-Up</strong></td><td>3&times;8</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pull+up+progression+guide" target="_blank">&#9654; Pull-Up</a></td><td><div class="pro-note">Mike Trout &mdash; pull-up foundation in every upper body session.</div></td></tr>
           <tr><td><strong>DB Bent Row (12&ndash;15 lb)</strong></td><td>3&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=dumbbell+bent+over+row+form" target="_blank">&#9654; DB Row</a></td><td><div class="pro-note">Aaron Judge &mdash; back strength powers every swing and throw.</div></td></tr>
@@ -918,8 +901,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         </tbody></table>
       </div>
     </div>
-    <div class="day-panel" id="p4i1-thu">
-      <div class="card core"><div class="time-block">THU &middot; CORE + Hip Load</div>
+    <div class="day-panel" id="p4i1-coreflex">
+      <div class="card core"><div class="time-block">CORE + FLEX</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Plank</strong></td><td>3&times;45 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=perfect+plank+form+tutorial" target="_blank">&#9654; Perfect Plank</a></td><td><div class="pro-note">Mike Trout's trainer &mdash; braced core = faster bat through the zone.</div></td></tr>
           <tr><td><strong>Hip Thrust</strong></td><td>3&times;12</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+thrust+exercise+form" target="_blank">&#9654; Hip Thrust</a></td><td><div class="pro-note">Back-leg glute &mdash; drives the back hip through the hitting zone.</div></td></tr>
@@ -927,10 +910,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
           <tr><td><strong>Woodchop w/ Band</strong></td><td>3&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=cable+woodchop+band+exercise" target="_blank">&#9654; Woodchop</a></td><td><div class="pro-note">Tatis Jr. &mdash; diagonal power = swing + throw in one movement.</div></td></tr>
           <tr><td><strong>Pallof Press</strong></td><td>3&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pallof+press+anti+rotation+core" target="_blank">&#9654; Pallof Press</a></td><td><div class="pro-note">Judge's trainer &mdash; anti-rotation for barrel control.</div></td></tr>
         </tbody></table>
+        <div class="tip-box" style="margin-top:10px;"><strong>Mobility Flow:</strong> Foam Roll 10 min &middot; 90/90 Hip 90 sec each &middot; T-Spine Rotation 10 each side &middot; Band Overhead Mobility 10 reps &middot; Sun Salutation 5 rounds &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a> 5 min</div>
       </div>
     </div>
-    <div class="day-panel" id="p4i1-fri">
-      <div class="card sport"><div class="time-block">FRI &middot; FULL BODY + Baseball</div>
+    <div class="day-panel" id="p4i1-fullbody">
+      <div class="card sport"><div class="time-block">FULL BODY + Baseball</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Goblet Squat (15 lb)</strong></td><td>3&times;12</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=goblet+squat+form+tutorial" target="_blank">&#9654; Goblet Squat</a></td><td><div class="pro-note">Mike Trout &mdash; leg power base.</div></td></tr>
           <tr><td><strong>RDL (12&ndash;15 lb)</strong></td><td>3&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=romanian+deadlift+youth+form" target="_blank">&#9654; Youth RDL</a></td><td><div class="pro-note">Hamstring = #1 baserunning injury prevention.</div></td></tr>
@@ -940,33 +924,20 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         <div class="ts ts-f" style="margin-top:8px;"><div class="ts-label">&#128293; Finisher &middot; TABATA</div><a class="ex-link" href="https://www.youtube.com/results?search_query=jump+squat+plyometric+form" target="_blank">&#9654; Squat Jumps</a> + <a class="ex-link" href="https://www.youtube.com/results?search_query=lateral+bound+plyometric+exercise" target="_blank">&#9654; Lateral Bounds</a> 20s/10s &times;4 each</div>
       </div>
     </div>
-    <div class="day-panel" id="p4i1-sat">
-      <div class="card flex"><div class="time-block">SAT &middot; MOBILITY + T-Spine</div>
-        <table class="ex-table"><thead><tr><th>Movement</th><th>Duration</th><th>Watch It</th></tr></thead><tbody>
-          <tr><td>Foam Roll (full body)</td><td>10 min</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=foam+rolling+full+body+guide" target="_blank">&#9654; Foam Rolling Guide</a></td></tr>
-          <tr><td>90/90 Hip Stretch</td><td>90 sec each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">&#9654; 90/90 Hip</a></td></tr>
-          <tr><td>T-Spine Rotation</td><td>10 each side</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=thoracic+spine+rotation+mobility+exercise" target="_blank">&#9654; T-Spine Rotation</a></td></tr>
-          <tr><td>Band Overhead Mobility</td><td>10 reps</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=band+overhead+shoulder+mobility" target="_blank">&#9654; Band Overhead</a></td></tr>
-          <tr><td>Sun Salutation</td><td>5 rounds</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=sun+salutation+yoga+flow+beginners" target="_blank">&#9654; Sun Salutation</a></td></tr>
-          <tr><td>Box Breathing</td><td>5 min</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a></td></tr>
-        </tbody></table>
-      </div>
-    </div>
   </div>
 
   <!-- INTERVAL 2 -->
   <div class="p4-panel" id="p4-i2">
     <div class="p4-block"><div class="p4-block-title">Interval 2 &mdash; Strength Increase</div><div class="p4-block-sub">Add 2&ndash;5 lb to all dumbbells. Single-leg and anti-rotation emphasis. Med ball intensity increases.</div></div>
     <div class="day-tabs">
-      <button class="day-tab active" onclick="showDay('p4i2','mon',this)">&#128170; Mon</button>
-      <button class="day-tab" onclick="showDay('p4i2','tue',this)">&#9889; Tue</button>
-      <button class="day-tab" onclick="showDay('p4i2','wed',this)">&#128257; Wed</button>
-      <button class="day-tab" onclick="showDay('p4i2','thu',this)">&#128293; Thu</button>
-      <button class="day-tab" onclick="showDay('p4i2','fri',this)">&#127919; Fri</button>
-      <button class="day-tab" onclick="showDay('p4i2','sat',this)">&#129504; Sat</button>
+      <button class="day-tab active" onclick="showDay('p4i2','push',this)">&#128170; Push</button>
+      <button class="day-tab" onclick="showDay('p4i2','speed',this)">&#9889; Speed</button>
+      <button class="day-tab" onclick="showDay('p4i2','pull',this)">&#128257; Pull</button>
+      <button class="day-tab" onclick="showDay('p4i2','coreflex',this)">&#128293; Core + Flex</button>
+      <button class="day-tab" onclick="showDay('p4i2','fullbody',this)">&#127919; Full Body</button>
     </div>
-    <div class="day-panel active" id="p4i2-mon">
-      <div class="card push"><div class="time-block">MON &middot; PUSH + Rotational Push</div>
+    <div class="day-panel active" id="p4i2-push">
+      <div class="card push"><div class="time-block">PUSH + Rotational Push</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Explosive Push-Up</strong></td><td>3&times;6</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=explosive+clap+push+up+tutorial" target="_blank">&#9654; Explosive Push-Up</a></td><td><div class="pro-note">Aaron Judge &mdash; same fast-twitch as tire jump training.</div></td></tr>
           <tr><td><strong>DB Incline Press (10 lb)</strong></td><td>3&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=dumbbell+shoulder+press+form" target="_blank">&#9654; Incline Press</a></td><td><div class="pro-note">Upper chest and front delt &mdash; bat path control at contact.</div></td></tr>
@@ -976,9 +947,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         </tbody></table>
       </div>
     </div>
-    <div class="day-panel" id="p4i2-tue"><div class="tip-box"><strong>Speed &mdash; Resisted version:</strong> Full ladder circuit 15 min &middot; Resisted sprint (partner) 4&times;40 ft &middot; Lateral bound 4&times;8 each &middot; Depth jump 3&times;5 &middot; TABATA Squat Jumps 20s/10s &times;8.</div></div>
-    <div class="day-panel" id="p4i2-wed">
-      <div class="card pull"><div class="time-block">WED &middot; PULL + Single-Arm</div>
+    <div class="day-panel" id="p4i2-speed"><div class="tip-box"><strong>Speed &mdash; Resisted version:</strong> Full ladder circuit 15 min &middot; Resisted sprint (partner) 4&times;40 ft &middot; Lateral bound 4&times;8 each &middot; Depth jump 3&times;5 &middot; TABATA Squat Jumps 20s/10s &times;8.</div></div>
+    <div class="day-panel" id="p4i2-pull">
+      <div class="card pull"><div class="time-block">PULL + Single-Arm</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Single-Arm DB Row (15 lb)</strong></td><td>4&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=single+arm+dumbbell+row+form" target="_blank">&#9654; Single-Arm Row</a></td><td><div class="pro-note">Aaron Judge &mdash; unilateral work prevents shoulder breakdown.</div></td></tr>
           <tr><td><strong>Weighted Pull-Up</strong></td><td>3&times;6</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pull+up+progression+guide" target="_blank">&#9654; Pull-Up Mastery</a></td><td><div class="pro-note">Mike Trout &mdash; weighted pull-ups off-season for peak back strength.</div></td></tr>
@@ -988,8 +959,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         </tbody></table>
       </div>
     </div>
-    <div class="day-panel" id="p4i2-thu">
-      <div class="card core"><div class="time-block">THU &middot; CORE + Swing Loading</div>
+    <div class="day-panel" id="p4i2-coreflex">
+      <div class="card core"><div class="time-block">CORE + FLEX</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Single-Leg Hip Thrust</strong></td><td>3&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+thrust+exercise+form" target="_blank">&#9654; Hip Thrust</a></td><td><div class="pro-note">Unilateral hip drive mirrors the back leg in a swing.</div></td></tr>
           <tr><td><strong>Landmine Rotation</strong></td><td>3&times;8 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=landmine+rotation+exercise+form" target="_blank">&#9654; Landmine Rotation</a></td><td><div class="pro-note">MLB hitting coaches &mdash; loaded hip rotation = swing loading.</div></td></tr>
@@ -997,25 +968,24 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
           <tr><td><strong>Hollow Body Hold</strong></td><td>3&times;20 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hollow+body+hold+core+exercise" target="_blank">&#9654; Hollow Body</a></td><td><div class="pro-note">Full core tension at top of swing position.</div></td></tr>
           <tr><td><strong>Pallof Press</strong></td><td>3&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pallof+press+anti+rotation+core" target="_blank">&#9654; Pallof Press</a></td><td><div class="pro-note">Judge &mdash; barrel control and swing plane stability.</div></td></tr>
         </tbody></table>
+        <div class="tip-box" style="margin-top:10px;"><strong>Mobility Flow:</strong> Foam Roll 10 min &middot; Sleeper Stretch 45 sec each &middot; Prone Y/T/W 2&times;10 &middot; 90/90 Hip 90 sec each &middot; Sun Salutation 5 rounds &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a> 5 min</div>
       </div>
     </div>
-    <div class="day-panel" id="p4i2-fri"><div class="tip-box"><strong>Full Body + Power:</strong> Bulgarian Split Squat 3&times;8 each (10 lb) &middot; Single-Leg RDL 3&times;10 each (10 lb) &middot; Lateral Lunge to Drive 3&times;10 each &middot; TABATA Squat Jumps 20s/10s &times;4 &rarr; Burpees &times;4.</div></div>
-    <div class="day-panel" id="p4i2-sat"><div class="tip-box"><strong>Mobility + Shoulder Focus:</strong> Foam Roll 10 min &middot; Sleeper Stretch 45 sec each &middot; Prone Y/T/W 2&times;10 &middot; 90/90 Hip 90 sec each &middot; Sun Salutation 5 rounds.</div></div>
+    <div class="day-panel" id="p4i2-fullbody"><div class="tip-box"><strong>Full Body + Power:</strong> Bulgarian Split Squat 3&times;8 each (10 lb) &middot; Single-Leg RDL 3&times;10 each (10 lb) &middot; Lateral Lunge to Drive 3&times;10 each &middot; TABATA Squat Jumps 20s/10s &times;4 &rarr; Burpees &times;4.</div></div>
   </div>
 
   <!-- INTERVAL 3 -->
   <div class="p4-panel" id="p4-i3">
     <div class="p4-block"><div class="p4-block-title">Interval 3 &mdash; Off-Season Peak &middot; Arrive at LexCath Ready</div><div class="p4-block-sub">Heavier DB (15&ndash;20 lb). Explosive + heavy combined. Nov 4 &ndash; Jan 1, 2027.</div></div>
     <div class="day-tabs">
-      <button class="day-tab active" onclick="showDay('p4i3','mon',this)">&#128170; Mon</button>
-      <button class="day-tab" onclick="showDay('p4i3','tue',this)">&#9889; Tue</button>
-      <button class="day-tab" onclick="showDay('p4i3','wed',this)">&#128257; Wed</button>
-      <button class="day-tab" onclick="showDay('p4i3','thu',this)">&#128293; Thu</button>
-      <button class="day-tab" onclick="showDay('p4i3','fri',this)">&#127919; Fri</button>
-      <button class="day-tab" onclick="showDay('p4i3','sat',this)">&#129504; Sat</button>
+      <button class="day-tab active" onclick="showDay('p4i3','push',this)">&#128170; Push</button>
+      <button class="day-tab" onclick="showDay('p4i3','speed',this)">&#9889; Speed</button>
+      <button class="day-tab" onclick="showDay('p4i3','pull',this)">&#128257; Pull</button>
+      <button class="day-tab" onclick="showDay('p4i3','coreflex',this)">&#128293; Core + Flex</button>
+      <button class="day-tab" onclick="showDay('p4i3','fullbody',this)">&#127919; Full Body</button>
     </div>
-    <div class="day-panel active" id="p4i3-mon">
-      <div class="card push"><div class="time-block">MON &middot; UPPER PUSH Peak</div>
+    <div class="day-panel active" id="p4i3-push">
+      <div class="card push"><div class="time-block">UPPER PUSH Peak</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Clap Push-Up</strong></td><td>3&times;6</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=explosive+clap+push+up+tutorial" target="_blank">&#9654; Explosive Push-Up</a></td><td><div class="pro-note">Aaron Judge &mdash; same fast-twitch pattern as his plyometric training.</div></td></tr>
           <tr><td><strong>DB Bench Press (15 lb)</strong></td><td>4&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=dumbbell+chest+fly+form" target="_blank">&#9654; DB Bench Press</a></td><td><div class="pro-note">Judge's off-season pressing program peak.</div></td></tr>
@@ -1025,9 +995,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         </tbody></table>
       </div>
     </div>
-    <div class="day-panel" id="p4i3-tue"><div class="tip-box"><strong>Speed Peak:</strong> Full ladder 15 min &middot; Resisted sprint 5&times;40 ft &middot; Box jump 18&ndash;20 in 4&times;5 &middot; Depth jump 3&times;5 &middot; TABATA Squat Jumps 20s/10s &times;8.</div></div>
-    <div class="day-panel" id="p4i3-wed">
-      <div class="card pull"><div class="time-block">WED &middot; UPPER PULL + Arm Health Peak</div>
+    <div class="day-panel" id="p4i3-speed"><div class="tip-box"><strong>Speed Peak:</strong> Full ladder 15 min &middot; Resisted sprint 5&times;40 ft &middot; Box jump 18&ndash;20 in 4&times;5 &middot; Depth jump 3&times;5 &middot; TABATA Squat Jumps 20s/10s &times;8.</div></div>
+    <div class="day-panel" id="p4i3-pull">
+      <div class="card pull"><div class="time-block">UPPER PULL + Arm Health Peak</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Weighted Pull-Up</strong></td><td>4&times;6</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pull+up+progression+guide" target="_blank">&#9654; Pull-Up Mastery</a></td><td><div class="pro-note">LeBron James + Mike Trout &mdash; weighted pull-ups off-season peak.</div></td></tr>
           <tr><td><strong>DB Row (15&ndash;18 lb)</strong></td><td>4&times;10</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=dumbbell+bent+over+row+form" target="_blank">&#9654; DB Row</a></td><td><div class="pro-note">Aaron Judge &mdash; heavy rows = back strength behind every swing and throw.</div></td></tr>
@@ -1038,8 +1008,8 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         </tbody></table>
       </div>
     </div>
-    <div class="day-panel" id="p4i3-thu">
-      <div class="card core"><div class="time-block">THU &middot; CORE + SWING LOAD Peak</div>
+    <div class="day-panel" id="p4i3-coreflex">
+      <div class="card core"><div class="time-block">CORE + FLEX Peak</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Plank</strong></td><td>4&times;60 sec</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=perfect+plank+form+tutorial" target="_blank">&#9654; Perfect Plank</a></td><td><div class="pro-note">Mike Trout &mdash; non-negotiable foundation.</div></td></tr>
           <tr><td><strong>Single-Leg Hip Thrust</strong></td><td>4&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=hip+thrust+exercise+form" target="_blank">&#9654; Hip Thrust</a></td><td><div class="pro-note">Peak back-leg glute power &mdash; drives the hip through the hitting zone.</div></td></tr>
@@ -1047,10 +1017,11 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
           <tr><td><strong>Med Ball Slam + Rot. Throw</strong></td><td>4&times;8 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=medicine+ball+rotational+throw+wall" target="_blank">&#9654; Med Ball Throw</a></td><td><div class="pro-note">Bryce Harper &mdash; full swing-loading sequence.</div></td></tr>
           <tr><td><strong>Pallof Press</strong></td><td>4&times;10 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=pallof+press+anti+rotation+core" target="_blank">&#9654; Pallof Press</a></td><td><div class="pro-note">Judge &mdash; barrel control and swing plane stability.</div></td></tr>
         </tbody></table>
+        <div class="tip-box" style="margin-top:10px;"><strong>Full Mobility Reset:</strong> Foam Roll 10 min &middot; 90/90 Hip 2 min each &middot; T-Spine Rotation 15 each side &middot; Sleeper Stretch 45 sec each &middot; Sun Salutation 5 rounds &middot; <a class="ex-link" href="https://www.youtube.com/results?search_query=box+breathing+technique+how+to" target="_blank">&#9654; Box Breathing</a> 5 min</div>
       </div>
     </div>
-    <div class="day-panel" id="p4i3-fri">
-      <div class="card sport"><div class="time-block">FRI &middot; FULL BODY + Baseball Peak</div>
+    <div class="day-panel" id="p4i3-fullbody">
+      <div class="card sport"><div class="time-block">FULL BODY + Baseball Peak</div>
         <table class="ex-table"><thead><tr><th>Exercise</th><th>Sets&times;Reps</th><th>Watch It</th><th>&#9918; Pro Tie-In</th></tr></thead><tbody>
           <tr><td><strong>Heavy RDL (15&ndash;18 lb)</strong></td><td>4&times;8</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=romanian+deadlift+youth+form" target="_blank">&#9654; RDL</a></td><td><div class="pro-note">Peak hamstring &mdash; arrive at spring stronger than when you left.</div></td></tr>
           <tr><td><strong>Bulgarian Split Squat (12 lb)</strong></td><td>4&times;8 each</td><td><a class="ex-link" href="https://www.youtube.com/results?search_query=split+squat+proper+form" target="_blank">&#9654; Bulgarian Split Squat</a></td><td><div class="pro-note">Pitching stride and baserunning push-off peak.</div></td></tr>
@@ -1060,7 +1031,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
         <div class="ts ts-f" style="margin-top:8px;"><div class="ts-label">&#128293; TABATA Finisher</div><a class="ex-link" href="https://www.youtube.com/results?search_query=jump+squat+plyometric+form" target="_blank">&#9654; Squat Jumps</a> 20s/10s &times;4 &rarr; <a class="ex-link" href="https://www.youtube.com/results?search_query=lateral+bound+plyometric+exercise" target="_blank">&#9654; Lateral Bounds</a> 20s/10s &times;4</div>
       </div>
     </div>
-    <div class="day-panel" id="p4i3-sat"><div class="tip-box"><strong>Full Mobility Reset:</strong> Foam Roll 10 min &middot; 90/90 Hip 2 min each &middot; T-Spine Rotation 15 each side &middot; Sleeper Stretch 45 sec each &middot; Sun Salutation 5 rounds &middot; Box Breathing 5 min.</div></div>
   </div>
 
 </div>
@@ -1257,7 +1227,7 @@ function calcTicker(){
   const data=loadStreakData(); let total=0,done=0;
   let d=new Date(PLAN_START);
   while(d<=PLAN_END&&d<=TODAY){
-    if(d.getDay()!==0){total++;if(data[dateKey(d)]==='done')done++;}
+    total++;if(data[dateKey(d)]==='done')done++;
     d.setDate(d.getDate()+1);
   }
   const pct=total>0?Math.round(done/total*100):0;
@@ -1281,8 +1251,7 @@ function buildStreak(){
     const cell=document.createElement('div'); cell.className='streak-day';
     cell.textContent=d.getDate();
     cell.title=d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
-    if(dow===0){cell.classList.add('rest-day');}
-    else if(d>TODAY){cell.classList.add('future');}
+    if(d>TODAY){cell.classList.add('future');}
     else{
       if(data[k]==='done')cell.classList.add('done');
       cell.dataset.dk=k;
